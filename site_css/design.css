@@ -37,7 +37,7 @@ body {
 	border-right:white solid 1px;
 }
 
-#navbar a:link, a:visited {
+#navbar li a:link, #navbar li a:visited {
 	color:#CCCCCC;
 	text-decoration:none;
 }
