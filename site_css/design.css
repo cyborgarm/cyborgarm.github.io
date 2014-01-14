@@ -1,69 +1,185 @@
+/* 
+ *  RESET THE BROWSER TO UNIFORM
+ *  http://meyerweb.com/eric/tools/css/reset/ 
+ *  v2.0 | 20110126
+ *  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+/* BEGIN CUSTOM CSS HERE */
 body {
 	font-family:Arial, Helvetica, sans-serif;
-	color:#003366;
-	background-image: url("../docs_imgs/border.png"); 
 }
-
-#container {
-	margin-left: 322px;
-	width:740px;
-	z-index:-10;
+h1 {
+	padding: 10px;
+	font-size: 30px;
+	color: #003366;
+	border-bottom: #B3B3B3 1px solid;
 }
-
-#header {
-	background:#000000;
-	color:#FFFFFF;
-	padding:10px 10px 10px 10px;
-	margin: -10px -10px -10px -10px;
-	z-index:1;
+h2 {
+	font-size: 25px;
+	padding: 10px;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 700;
+	padding: 10px;
 }
 
 /*Horizontal Nav Bar*/
-#navbar {
-	position:relative;
-	margin-left:-30px;
-	margin-bottom: -10px;
+nav {
+	display:block;
+	width: 100%;
+	position: fixed;
+	text-align:center;
+	color:#CCCCCC;
+	background-color: #40668d;
+	background-image: -moz-linear-gradient(top, #40668d, #003466);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#40668d), to(#003466));
+	background-image: -webkit-linear-gradient(top, #40668d, #003466);
+	background-image: -o-linear-gradient(top, #40668d, #003466);
+	background-image: linear-gradient(to bottom, #40668d, #003466);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003466', endColorstr='#40668d', GradientType=0);
+	border-color: #003466;
+	z-index: 1000;
 }
-
-#navbar li {
-	display:inline;
-	list-style-type:none;
-	margin: 0;
+nav h2 {
+	text-align:center;
+	color:#CCCCCC;
+	opacity: 0.7;
+}
+nav li {
+	display:inline-block;
+	padding: 10px;
 	text-align: left;
 	font-weight: bold;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-left:white solid 1px;
-	border-right:white solid 1px;
 }
-
-#navbar li a:link, #navbar li a:visited {
+nav a, nav a:link, nav a:visited {
+	padding: 10px;
 	color:#CCCCCC;
 	text-decoration:none;
 }
-
-#navbar a:hover{
-	text-decoration:underline;
+nav a:hover{
+	opacity: 0.7;
 }
-/*End NavBar*/
 
-#main {
-	color:#000000;
+.anchor {
+	display:block;
 	position:relative;
-	width:700px;
-	padding: 30px 10px 10px 30px;
-	z-index:2;
+	top: -80px;
 }
 
-#main a:link, a:visited, h2 {
+/* SECTIONS */
+section {
+	display:block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	color:#000000;
+}
+section a:link, section a:visited {
 	color:#003366;
 }
-
-p {
-	left:30px;
+section .wrapper {
+	display: block;
+	width: 850px;
+	margin: 0 auto;
+	color: #404040;
+}
+section .wrapper h4 {
+	padding: 10px;
+	font-size: 18px;
+	color: #003366;
+	font-weight: 700;
+}
+section .wrapper p, section .wrapper ul {
+	line-height: 1.3em;
+	padding: 10px;
 }
 
-#footer {
-	float:right;
-	font-size:10px;
+#splash {
+	background: url("../docs_imgs/squared_metal.png");
+	padding-top:150px;
+	height: 500px;
+	text-align: center;
+}
+#splash .wrapper {
+	background: url("../docs_imgs/opac.png") repeat;
+	padding: 20px;
+	height: 320px;
+	border-radius: 30px;
+}
+#splash .wrapper img {
+	float: left;
+	margin-right: 30px;
+	height: 300px;
+	width: auto;
+}
+#splash p {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	opacity: 0.7;
+}
+
+#gallery-section img{
+	display:inline-block;
+	vertical-align: middle;
+	padding-top: 5px;
+	max-width: 200px;
+	max-height: 150px;
+}
+
+#schedule-section {
+	padding-top:100px;
+}
+
+footer {
+	display: block;
+	padding: 10px;
+	text-align: center;
+	font-weight: 700;
+	color: #8d8d8d;
+	border-top: 1px #8D8D8D solid;
+}
+section a:link, footer a:link {
+	color:#003366;
+	text-decoration: none;
+	font-weight: 700;
+}
+section a:hover, footer a:hover {
+	color: #B3B3B3;	
 }
